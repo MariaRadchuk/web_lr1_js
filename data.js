@@ -3,7 +3,7 @@ const films = [
         title: "Ілюзія обману 3",
         cinema: "Кінотеатр 'Multiplex Retroville ScreenX'",
         hall: "Зал 1",
-        date: "2025-11-12"
+        date: "2025-11-03"
     },
     {
         title: "ОКЕАН ЕЛЬЗИ: СПОСТЕРЕЖЕННЯ ШТОРМУ",
@@ -15,13 +15,13 @@ const films = [
         title: "Одна битва за іншою",
         cinema: "Кінотеатр 'Multiplex Lavina IMAX Лазер'",
         hall: "LUX-зал",
-        date: "2025-10-29"
+        date: "2025-10-25"
     },
     {
         title: "Антарктида",
         cinema: "Кінотеатр 'Multiplex Караван Outlet'",
         hall: null,
-        date: "2025-05-26"
+        date: "2025-11-03"
     },
     {
         title: "Зоотрополіс 2",
