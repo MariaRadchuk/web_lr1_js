@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЛР2 • DOM + події</title>
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Радчук Марія Олександрівна</h1>
+      <p>Група КН-31 • Варіант 16</p>
+    </header>
+
+    <nav class="menu">
+      <a href="index.html">ЛР1 • Кіносеанси</a>
+      <a href="lab2.html" class="active">ЛР2 • DOM + події</a>
+    </nav>
+
+    <div class="container">
+      <!-- ЗАВДАННЯ 1 (варіант 6) -->
+      <section>
+        <h2>Завдання 1 (варіант 6)</h2>
+        <p>
+          Обійти всі блоки div і сформувати нумерований список з їх текстом.
+        </p>
+        <div class="text-block">HTML — основа структури веб-сторінки</div>
+        <div class="text-block">
+          CSS відповідає за зовнішній вигляд та адаптивність
+        </div>
+        <div class="text-block">JavaScript додає інтерактивність та логіку</div>
+        <div class="text-block">DOM — це міст між HTML і JavaScript</div>
+        <button id="task1Btn">Сформувати список</button>
+        <ol id="sentenceList"></ol>
+      </section>
+
+      <!-- ЗАВДАННЯ 2 (варіант 3) -->
+      <section>
+        <h2>Завдання 2 (варіант 3)</h2>
+        <p>Додати в таблицю останній рядок з сумами по стовпцях.</p>
+        <table id="numberTable">
+          <tr>
+            <td>5</td>
+            <td>12</td>
+            <td>8</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>2</td>
+            <td>15</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>18</td>
+            <td>6</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>1</td>
+            <td>10</td>
+            <td>5</td>
+          </tr>
+        </table>
+        <button id="task2Btn">Обчислити суми стовпців</button>
+      </section>
+    </div>
+
+    <script src="js/lab2-task1.js"></script>
+    <script src="js/lab2-task2.js"></script>
+  </body>
+</html>

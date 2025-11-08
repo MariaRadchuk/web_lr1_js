@@ -14,6 +14,22 @@ body {
   flex-direction: column;
 }
 
+/* ================== ШАПКА ТА МЕНЮ ================== */
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+header p {
+  font-size: 1.1rem;
+}
+
+/* ================== КОНТЕЙНЕР ================== */
 .container {
   width: 100%;
   max-width: 1000px;
@@ -22,18 +38,15 @@ body {
   flex: 1;
 }
 
-header {
-  background-color: #2c3e50;
-  color: white;
+/* ================== СЕКЦІЇ ================== */
+section,
+.task-description,
+.result {
+  background-color: white;
   padding: 20px;
   border-radius: 8px;
-  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 24px;
-}
-
-h1 {
-  font-size: 1.8rem;
-  margin-bottom: 8px;
 }
 
 h2 {
@@ -42,38 +55,9 @@ h2 {
   font-size: 1.4rem;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  flex: 1;
-}
-
-.task-description,
-.controls,
-.result {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.task-description ul {
-  margin: 12px 0 0 24px;
-  list-style: disc;
-}
-
-.task-description ul li {
-  margin-bottom: 6px;
-}
-
-.task-description {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.task-description #runBtn {
+/* ================== КНОПКИ ================== */
+button,
+#runBtn {
   align-self: center;
   background-color: #27ae60;
   color: white;
@@ -87,24 +71,24 @@ main {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   min-width: 200px;
 }
-
-.task-description #runBtn:hover {
+button:hover,
+#runBtn:hover {
   background-color: #219150;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-.task-description #runBtn:active {
+button:active,
+#runBtn:active {
   transform: translateY(0);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
+/* ================== ЛР1 — КІНОСЕАНСИ ================== */
 #rezult {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-
 .film-item {
   padding: 14px;
   background-color: #ecf0f1;
@@ -113,31 +97,23 @@ main {
   transition: all 0.2s ease;
   position: relative;
 }
-
 .film-item:hover {
   transform: translateX(4px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
 .today {
   background-color: #d5f4e6 !important;
   border-left-color: #27ae60 !important;
   font-weight: bold;
 }
-
 .one-day-left {
   background-color: #fef9e7 !important;
   border-left-color: #f39c12 !important;
 }
-
 .overdue {
   background-color: #fadbd8 !important;
   border-left-color: #e74c3c !important;
   color: #c0392b;
-}
-
-.last_day {
-  color: #f39c12;
 }
 .no-hall {
   display: block;
@@ -148,63 +124,100 @@ main {
   padding-left: 4px;
 }
 
+/* ================== ЛР2 — СПИСКИ ТА ТАБЛИЦІ ================== */
+#sentenceList,
+#countriesList {
+  margin-top: 15px;
+}
+#sentenceList li,
+#countriesList li {
+  background: #ecf0f1;
+  padding: 12px;
+  margin: 8px 0;
+  border-left: 5px solid #3498db;
+  border-radius: 6px;
+  list-style: none;
+}
+
+/* Таблиця */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+table,
+th,
+td {
+  border: 2px solid #34495e;
+}
+th,
+td {
+  padding: 12px;
+  text-align: center;
+}
+th {
+  background: #34495e;
+  color: white;
+}
+.green-cell {
+  background: #27ae60 !important;
+  color: white;
+  font-weight: bold;
+}
+
+/* ================== АДАПТИВНІСТЬ ================== */
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
   }
-
   header {
-    padding: 16px;
-    border-radius: 6px;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
   }
-
-  h1 {
+  header h1 {
     font-size: 1.6rem;
   }
-
   h2 {
     font-size: 1.3rem;
   }
-
+  section,
   .task-description,
   .result {
     padding: 16px;
   }
-  .task-description #runBtn {
+  button,
+  #runBtn {
     width: 100%;
     max-width: 300px;
     padding: 14px;
     font-size: 1.1rem;
   }
-
   .film-item {
     padding: 12px;
     font-size: 0.95rem;
   }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu a {
+    width: 80%;
+    text-align: center;
+    margin: 8px 0;
+  }
 }
 
 @media (max-width: 480px) {
-  body {
-    padding: 10px;
-  }
-
-  .container {
-    padding: 0 10px;
-  }
-
   header {
-    padding: 14px;
+    padding: 16px;
   }
-
-  h1 {
+  header h1 {
     font-size: 1.4rem;
   }
-
-  .task-description ul {
-    margin-left: 18px;
-  }
-
   .film-item {
     border-left-width: 4px;
+  }
+  .task-description ul {
+    margin-left: 18px;
   }
 }
