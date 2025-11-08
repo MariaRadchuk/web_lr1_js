@@ -3,7 +3,6 @@ document.getElementById('task2Btn').addEventListener('click', () => {
     const rows = table.rows;
     const cols = rows[0].cells.length;
 
-    // Якщо рядок з сумами вже є — видаляємо
     if (rows.length > 4) table.deleteRow(-1);
 
     const sumRow = table.insertRow();
