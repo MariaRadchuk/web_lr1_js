@@ -21,7 +21,7 @@ const films = [
         title: "Антарктида",
         cinema: "Кінотеатр 'Multiplex Караван Outlet'",
         hall: null,
-        date: "2025-11-03"
+        date: "2025-11-06"
     },
     {
         title: "Зоотрополіс 2",

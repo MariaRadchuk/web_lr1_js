@@ -136,6 +136,9 @@ main {
   color: #c0392b;
 }
 
+.last_day {
+  color: #f39c12;
+}
 .no-hall {
   display: block;
   margin-top: 8px;
