@@ -20,11 +20,14 @@ header {
   color: white;
   padding: 30px 20px;
   text-align: center;
+  border-radius: 0 0 10px 10px;
 }
+
 header h1 {
   font-size: 2rem;
   margin-bottom: 8px;
 }
+
 header p {
   font-size: 1.1rem;
 }
@@ -57,7 +60,7 @@ h2 {
 
 /* ================== КНОПКИ ================== */
 button,
-#runBtn {
+#runTaskBtn {
   align-self: center;
   background-color: #27ae60;
   color: white;
@@ -70,17 +73,46 @@ button,
   transition: all 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   min-width: 200px;
+  margin-bottom: 20px;
 }
+
 button:hover,
-#runBtn:hover {
+#runTaskBtn:hover {
   background-color: #219150;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 button:active,
-#runBtn:active {
+#runTaskBtn:active {
   transform: translateY(0);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ================== ВИВІД РЕЗУЛЬТАТІВ (ЛР3) ================== */
+#resultOutput {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.animal-item {
+  padding: 14px;
+  background-color: #c3e0f1;
+  border-left: 5px solid #34a1ea;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.animal-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cat-item {
+  background-color: #f7dffc !important;
+  border-left-color: #d112f3 !important;
 }
 
 /* ================== ЛР1 — КІНОСЕАНСИ ================== */
@@ -89,18 +121,20 @@ button:active,
   flex-direction: column;
   gap: 12px;
 }
+
 .film-item {
   padding: 14px;
   background-color: #ecf0f1;
   border-left: 5px solid #3498db;
   border-radius: 6px;
   transition: all 0.2s ease;
-  position: relative;
 }
+
 .film-item:hover {
   transform: translateX(4px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 .today {
   background-color: #d5f4e6 !important;
   border-left-color: #27ae60 !important;
@@ -121,7 +155,6 @@ button:active,
   font-style: italic;
   color: #7f8c8d;
   font-size: 0.9rem;
-  padding-left: 4px;
 }
 
 /* ================== ЛР2 — СПИСКИ ТА ТАБЛИЦІ ================== */
@@ -129,6 +162,7 @@ button:active,
 #countriesList {
   margin-top: 15px;
 }
+
 #sentenceList li,
 #countriesList li {
   background: #ecf0f1;
@@ -145,20 +179,24 @@ table {
   border-collapse: collapse;
   margin: 20px 0;
 }
+
 table,
 th,
 td {
   border: 2px solid #34495e;
 }
+
 th,
 td {
   padding: 12px;
   text-align: center;
 }
+
 th {
   background: #34495e;
   color: white;
 }
+
 .green-cell {
   background: #27ae60 !important;
   color: white;
@@ -172,7 +210,6 @@ th {
   }
   header {
     padding: 20px;
-    border-radius: 0 0 10px 10px;
   }
   header h1 {
     font-size: 1.6rem;
@@ -186,24 +223,16 @@ th {
     padding: 16px;
   }
   button,
-  #runBtn {
+  #runTaskBtn {
     width: 100%;
     max-width: 300px;
     padding: 14px;
     font-size: 1.1rem;
   }
-  .film-item {
+  .film-item,
+  .animal-item {
     padding: 12px;
     font-size: 0.95rem;
-  }
-  .menu {
-    flex-direction: column;
-    align-items: center;
-  }
-  .menu a {
-    width: 80%;
-    text-align: center;
-    margin: 8px 0;
   }
 }
 
@@ -214,10 +243,8 @@ th {
   header h1 {
     font-size: 1.4rem;
   }
-  .film-item {
+  .film-item,
+  .animal-item {
     border-left-width: 4px;
-  }
-  .task-description ul {
-    margin-left: 18px;
   }
 }
